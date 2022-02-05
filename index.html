@@ -1,4 +1,27 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Alessandra Bettina Garcia</title><style>
+<script>
+    var videos = document.getElementsByClassName("source");
+    for (var i = 0; i < videos.length; i++) {
+        var source = videos[i].getElementsByTagName("a");
+        if (source[0].href.includes("youtube")) {
+            var videoObject = document.createElement('iframe');
+            videoObject.src = source[0].href.replace("watch?v=", "embed/");
+            videos[i].style.padding = "0";
+            videoObject.style.width = "100%";
+            videos[i].append(videoObject);
+            source[0].remove();
+        } else {
+            var videoObject = document.createElement('video');
+            videos[i].style.padding = "0";
+            videoObject.src = source[0].href;
+            videoObject.controls = true;
+            videoObject.style.width = "100%";
+            videos[i].append(videoObject);
+            source[0].remove();
+        }
+    }
+</script>
+
 /* cspell:disable-file */
 /* webkit printing magic: print all background colors */
 html {
