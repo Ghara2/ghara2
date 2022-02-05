@@ -1,4 +1,4 @@
-### Hi there 👋
+### This is a repository for my github.io page, which redirects to my portfolio in Notion.
 
 <!--
 **Ghara2/ghara2** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
